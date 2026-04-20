@@ -1,77 +1,81 @@
-.container {
-  font-family: "Quicksand", sans-serif;
-}
-
-.login,
-.home {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-}
-
-form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.formTitle {
-  color: teal;
-  font-weight: bold;
-}
-
-input {
-  height: 30px;
-  border: none;
-  border-bottom: 1px solid lightgray;
-}
-
-input:focus {
-  outline: none;
-}
-
-.submitButton {
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
-}
-
-.home {
-  width: 300px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.App {
+  font-family: sans-serif;
   text-align: center;
 }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #d7d7f58b;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: 100vh;
+    margin: 0;
+  }
 
-.deleteButton {
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #fff0f1;
-  color: #d95087;
-  cursor: pointer;
+
+
+.loginDiv,
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    gap: 15px; 
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    min-height: 70vh;
+    box-sizing: border-box;
 }
 
-.deleteButton:hover {
-  background-color: #fad4d7;
+.welcome {
+  font-size: 18px;
 }
+
+.logoutButton
+{
+align-self: flex-end;
+margin-bottom: 10px;
+}
+
+/* Input fields */
+  .loginDiv input[type="text"],
+  .loginDiv input[type="password"] {
+    width: 80%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.8px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+
+  .loginDiv input[type="text"]:focus,
+  .loginDiv input[type="password"]:focus {
+    outline: none;
+    border-color: #5b69bc;
+  }
+
+button{
+    width: fit-content;
+    padding: 14px;
+    background-color: #5b69bc;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #22274f;
+  }
+
+
+
 
 .error {
   font-size: 12px;

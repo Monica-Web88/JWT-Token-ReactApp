@@ -66,11 +66,20 @@ function App() {
     }
   };
 
+  const handleLogout = async () => {
+    console.log("Logging out user!");
+
+  }
+
+
   return (
     <div className="container">
       {user ? (
         <div className="home">
-          <span>
+          <button className="logoutButton" onClick={() => handleLogout()}>
+           Logout
+          </button>
+          <span className="welcome">
             Welcome to the <b>{user.isAdmin ? "admin" : "user"}</b> dashboard{" "}
             <b>{user.username}</b>.
           </span>
@@ -93,9 +102,9 @@ function App() {
           )}
         </div>
       ) : (
-        <div className="login">
+        <div className="loginDiv">
           <form onSubmit={handleSubmit}>
-            <span className="formTitle"> Login To Dashboard</span>
+            <h2> Login To Dashboard - JWT Token</h2>
             <input
               type="text"
               placeholder="username"
@@ -105,7 +114,7 @@ function App() {
               type="password"
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
-            />
+            /><br/>
             <button type="submit" className="submitButton">
               Login
             </button>
